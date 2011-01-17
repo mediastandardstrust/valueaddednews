@@ -3,4 +3,5 @@ python-dateutil
 South
 Markdown
 PIL
+feedparser
 
