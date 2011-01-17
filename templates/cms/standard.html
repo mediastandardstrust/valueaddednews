@@ -9,6 +9,9 @@
   <div class="primary">
     <div class="primary-cnt">
       <div class="txt-col">
+{% if not page.published %}
+        <div style="border: 2px dashed red; color:red; font-size: large; padding: 1em;" >PREVIEW (this page is not yet published)</div>
+{% endif %}
         {{ page.content|markdown:"vancodehilite" }}
       </div>
       <div class="aside">
