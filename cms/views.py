@@ -25,10 +25,13 @@ def showpage(request, path='', template_name=None):
         # is a child of something
         responsed['parent'] = page.parent
         responsed['toptitle'] = page.parent.title
-        responsed['siblings'] = page.parent.children.all()
+#        responsed['siblings'] = page.parent.children.all()
+
+        responsed['subnav'] = [ child for child in page.parent.children.filter( published=True ) ]
     else:
         # parent or standalone
         responsed['toptitle'] = page.title
+        responsed['subnav'] = [ child for child in page.children.filter( published=True) ]
     responsed['children'] = page.children.all()
 
     blocks = {}
