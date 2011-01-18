@@ -11,6 +11,7 @@ class PageAdmin(VersionAdmin):
     inlines = [
         BlockInline,
     ]
+    ordering = [ 'slug' ]
 
 admin.site.register(Page, PageAdmin)
 
