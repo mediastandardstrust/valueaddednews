@@ -685,6 +685,14 @@ ul.serv-list li.login {
 	font-style:italic;
 	margin-bottom:60px;
 }
+
+.codeblock {
+    display: block;
+	margin:-15px 1em 15px 1em;
+    padding: 0.5em;
+    background: #e9ebea;
+}
+
 .code {
 	position:relative;
 	margin:-15px 0 15px;

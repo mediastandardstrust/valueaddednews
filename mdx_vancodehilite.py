@@ -32,7 +32,7 @@ class CodeHtmlFormatter(HtmlFormatter):
         return self._wrap_code(source)
 
     def _wrap_code(self, source):
-        yield 0, '<code>'
+        yield 0, '<code class="codeblock">'
         for i, t in source:
             if i == 1:
                 # it's a line of formatted code
